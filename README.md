@@ -1,5 +1,7 @@
 A test kafka consumer for unique vehicle per day counting
 
+
+
 Static properties are defined in `Config.java`
 
 To install dependencies:
