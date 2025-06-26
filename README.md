@@ -11,7 +11,7 @@ To install dependencies:
 
 To run the consumer:  
 
-`mvn exec:run`
+`mvn exec:java`
 
 To test producer + consumer integration:  
 
