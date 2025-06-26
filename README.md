@@ -1,12 +1,18 @@
-A test kafka consumer for unique vehicle per day counting
+# Car count
+## A test kafka consumer for unique vehicle per day counting
 
-Static properties are defined in `Config.java`
+The program requires Kafka and Redis  
 
-To install dependencies:
+Config properties are defined in `Config.java`
+
+To install dependencies:  
+
 `mvn install` 
 
-To run the consumer:
+To run the consumer:  
+
 `mvn exec:run`
 
-To test producer + consumer integration
+To test producer + consumer integration:  
+
 `mvn test`
