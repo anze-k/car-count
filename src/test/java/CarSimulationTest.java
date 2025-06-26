@@ -69,17 +69,15 @@ public class CarSimulationTest {
     @Test()
     @Timeout(value = 60)
     public void simulateCarProducer() throws InterruptedException {
-        try(JsonSerializer<VehiclePassEvent> serializer = new JsonSerializer<>()) {
-            for (VehiclePassEvent event : CarList) {
-                ProducerRecord<String, VehiclePassEvent> record = new ProducerRecord<>(TOPIC,  event.getVehicleId(), event);
-                producer.send(record, (metadata, exception) -> {
-                    if (exception != null) {
-                        System.err.println("Error sending message: " + exception.getMessage());
-                    }
-                });
-            }
+        for (VehiclePassEvent event : CarList) {
+            ProducerRecord<String, VehiclePassEvent> record = new ProducerRecord<>(TOPIC,  event.getVehicleId(), event);
+            producer.send(record, (metadata, exception) -> {
+                if (exception != null) {
+                    System.err.println("Error sending message: " + exception.getMessage());
+                }
+            });
         }
-       
+
         producer.flush();
         
         Thread consumerThread = createConsumerThread();   

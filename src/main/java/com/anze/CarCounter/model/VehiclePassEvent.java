@@ -70,7 +70,7 @@ public class VehiclePassEvent {
 
     @Override
     public String toString() {
-        return "TollPassEvent{" +
+        return "VehiclePassEvent{" +
                 "tollStationId=" + tollStationId +
                 ", vehicleId='" + vehicleId + '\'' +
                 ", vehicleBrand=" + vehicleBrand +
